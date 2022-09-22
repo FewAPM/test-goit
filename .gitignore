@@ -7,3 +7,4 @@ target
 *.class
 .DS_Store
 *.class
+target/classes/TestClass.class
