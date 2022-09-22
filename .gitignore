@@ -6,3 +6,4 @@ target
 .DS_STORE /src/main/resources/log
 *.class
 .DS_Store
+*.class
