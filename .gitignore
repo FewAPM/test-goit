@@ -1,8 +1,10 @@
  .idea
-*.iml
  .iws
  .iml
  .ipr
  target
  .DS_STORE /src/main/resources/log
+ .DS_Store
+
+
 
