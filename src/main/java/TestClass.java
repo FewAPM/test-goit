@@ -1,6 +1,8 @@
 public class TestClass {
+    public void print(String s){
+        System.out.println("s");
+    }
     public static void main(String[] args) {
-        System.out.println("first commit");
-        System.out.println("second commit");
+    new TestClass().print("It is rather difficult for me :(");
     }
 }
