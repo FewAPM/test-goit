@@ -10,3 +10,5 @@ target
 target/classes/TestClass.class
 target/classes/TestClass.class
 *.class
+target/classes/TestClass.class
+*.class
