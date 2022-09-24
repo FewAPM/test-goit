@@ -1,41 +1,43 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+
 
 public class TestClass {
 
-    public int getMinPriceCount(int[] prices){
-
-        int counter = 0;
-        int buf;
-        if (prices.length == 0) {
-            return counter;
-        }
-        for (int i = 0; i < prices.length-1; i++) {
-            for (int j = 0; j < prices.length-i-1; j++) {
-                if (prices[j] > prices[j+1]) {
-                    buf = prices[j];
-                    prices[j] = prices[j+1];
-                    prices[j+1] = buf;
-                }
+    public int[] removePrice(int[] prices, int toRemove) {
+         int counter = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (toRemove != prices[i]) {
+                counter++;
             }
-
         }
-            int min = prices[0];
-            for (int element: prices) {
-                if (element == min) {
-                    counter++;
-                }
+        if (counter == 0) {
+            return new int[0];
+        }
+        int [] arrForReturn = new int[prices.length];
+        ArrayList<Integer> fuck = new ArrayList<>();
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] != toRemove) {
+                fuck.add(prices[i]);
             }
-        return counter;
         }
 
-
-
+    int [] ssss = new int[counter];
+        for (int i = 0; i < counter; i++) {
+            ssss[i] = fuck.get(i);
+        }
+        return ssss;
+    }
 
         public static void main(String[] args) {
-            System.out.println(new TestClass().getMinPriceCount(new int[] {5, 10, 15, 3, 5}));
+            System.out.println(Arrays.toString(new TestClass().removePrice(new int[] {6, 0, 5, 9, 5, 7, 9, 0, 7, 0}, 0)));
 
 
+
+
+            }
 
     }
-}
+
