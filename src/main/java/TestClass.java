@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class TestClass {
 
+    public void printPrices(float[] prices) {
+        for (int i = 0; i < prices.length; i++) {
+            System.out.println(prices[i] + " jup.");
+
+        }
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
