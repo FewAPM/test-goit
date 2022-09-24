@@ -3,33 +3,39 @@ import java.util.Scanner;
 
 public class TestClass {
 
-    public int[] findMinMaxPrices(int[] prices){
-        int min, max;
-        int [] newArray = new int []{};
+    public int getMinPriceCount(int[] prices){
+
+        int counter = 0;
+        int buf;
         if (prices.length == 0) {
-            return newArray;
-        } else {
-            int temp;
-            for (int i = 0; i < prices.length-1; i++) {
-                if (prices[i] > prices[i+1]) {
-                    temp = prices[i];
-                    prices[i] = prices[i+1];
-                    prices[i+1] = temp;
+            return counter;
+        }
+        for (int i = 0; i < prices.length-1; i++) {
+            for (int j = 0; j < prices.length-i-1; j++) {
+                if (prices[j] > prices[j+1]) {
+                    buf = prices[j];
+                    prices[j] = prices[j+1];
+                    prices[j+1] = buf;
                 }
             }
-            min = prices[0];
-            max = prices[prices.length-1];
-            if (min == max) {
-                return newArray = new int [] {min};
-            }
-            return newArray = new int [] {min, max};
+
         }
-    }
+            int min = prices[0];
+            for (int element: prices) {
+                if (element == min) {
+                    counter++;
+                }
+            }
+        return counter;
+        }
+
+
 
 
         public static void main(String[] args) {
-            System.out.println(Arrays.toString(new TestClass().findMinMaxPrices(new int[] {})));
-        ;
+            System.out.println(new TestClass().getMinPriceCount(new int[] {5, 10, 15, 3, 5}));
+
+
 
     }
 }
