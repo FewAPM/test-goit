@@ -36,10 +36,40 @@ public class TestClass {
         }
         return result;
     }
+    public String drawLine(int length){
+//        int line = 0;
+//        int counter = 1;
+//        String str = "";
+//        while (line < length) {
+//
+//            str += '*';
+//            line++;
+//            if (line == length) {
+//                break;
+//            }
+//            counter = 0;
+//
+//            while (counter < 1) {
+//                str += '#';
+//                counter++;
+//                line++;
+//            }
+//
+//        }
+        String str = "";
+        boolean isTrue = true;
+        while (length > 0) {
+         str += isTrue? '*' : '#';
+            isTrue = !isTrue;
+            length--;
+        }
+        return str;
+    }
 
     public static void main(String[] args) {
        // System.out.println(new TestClass().drawQuad(5));
-        System.out.println(new TestClass().drawRect(5, 6, 'X'));
+        //System.out.println(new TestClass().drawRect(5, 6, 'X'));
+        System.out.println(new TestClass().drawLine(11));
     }
 
 }
