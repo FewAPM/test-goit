@@ -1,7 +1,9 @@
 public class Recursion {
     public static void main(String[] args) {
-        System.out.println(factorial(5));
-        System.out.println(new Recursion().sumQuads(3));
+        //System.out.println(factorial(5));
+        //System.out.println(new Recursion().sumQuads(3));
+        Recursion r = new Recursion();
+
     }
     public static int factorial(int number) {
         if(number == 0 || number == 1) {
@@ -23,4 +25,22 @@ public class Recursion {
         }
         return result;
     }
+
+   // виклик new FirNumSum().calc(3) повертає 6
+
+
+//    public int calc(int n) {
+//
+//        if (n == 0 || n == 1) {
+//            return 1;
+//        }
+//        int factorial = 0;
+//        factorial += n * calc(n-1);
+//        return factorial;
+//    }
+
+
+
+
+
 }
