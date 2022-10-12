@@ -22,4 +22,18 @@ public class EqualsUtil {
 //    public int hashCode() {
 //        return Objects.hash(x, y, z);
 //    }
+// r1=Rectangle {36, 72}, r2=Rectangle {36, 63}
+
+    public static void main(String[] args) {
+        int tA = 36;
+        int tB = 72;
+        int OtherA = 36;
+        int OtherB = 63;
+
+        boolean can = tA <= OtherA & tB <= OtherB;
+        System.out.println(can);
+    }
+
+
+
 }

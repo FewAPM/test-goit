@@ -100,7 +100,7 @@ public class Main {
 //            }
 //        }
 //        return sumOfDivides;
- //   }
+    //   }
 
 //    int n = 15624;
 //    int sum = 0;
@@ -111,41 +111,23 @@ public class Main {
 
 
     public static void main(String[] args) {
-       // 500, 200, 100, 50, 20, 10, 5, 2, 1
-        int sum = 288312;
-        int amount = 0;
-        amount += sum / 500;
-        sum = sum % 500;
+        int[] getCoords = {0, 0};
+        int[] aiCoords = {48, 25};
+        int[][] targets = {
+                {48, 49},
+                {48, 60},
+                {48, 32},
+                {48, 35}
+        };
 
-        amount += sum / 200;
-        sum = sum % 200;
-
-        amount += sum /100;
-        sum = sum % 100;
-
-        amount += sum /50;
-        sum = sum % 50;
-
-        amount += sum /20;
-        sum = sum % 20;
-
-
-        amount += sum /10;
-        sum = sum % 10;
-
-        amount += sum /5;
-        sum = sum % 5;
-
-        amount += sum /2;
-        sum = sum % 2;
-
-        amount += sum /1;
-        sum = sum % 1;
+        for (int i = 0; i < targets.length; i++) {
+            getCoords[0] = targets[i][0];
+            getCoords[1] = targets[i][1];
+            System.out.print(getCoords[0]);
+            System.out.print(" " + getCoords[1] + " ");
+            System.out.println();
+        }
 
     }
 
-
-
-
-    }
-
+}
