@@ -1,4 +1,4 @@
-package OOP;
+package moduleSix;
 
 class RectangleAreaUtil{
     private int [] arr = new int [4];

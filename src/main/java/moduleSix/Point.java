@@ -1,6 +1,4 @@
-package OOP;
-
-import java.util.Objects;
+package moduleSix;
 
 public class Point{
     private int x, y, z;
