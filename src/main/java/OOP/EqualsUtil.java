@@ -30,6 +30,8 @@ public class EqualsUtil {
         int OtherA = 36;
         int OtherB = 63;
 
+
+
         boolean can = tA <= OtherA & tB <= OtherB;
         System.out.println(can);
     }
