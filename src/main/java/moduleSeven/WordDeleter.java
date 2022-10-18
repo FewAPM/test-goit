@@ -1,41 +1,67 @@
 package moduleSeven;
 import java.util.ArrayList;
 import java.util.Arrays;
-class WordDeleter{
-        public String remove(String phrase, String[] words) {
-        String [] phrases = phrase.split(" ");
-            String withoutWords = "";
-            int length = words.length;
-            int counter= 0;
-            int  iter = 0;
+class WordDeleter {
+//        public String remove(String phrase, String[] words) {
+//        String [] phrases = phrase.split(" ");
+//            String withoutWords = "";
+//            int length = words.length;
+//            int counter= 0;
+//            int  iter = 0;
+//
+//            if (words.length == 1) {
+//                for (int i = 0; i < words.length; i++) {
+//                    for (int j = 0; j < phrases.length; j++) {
+//                        if (!phrases[j].equals(words[i])) {
+//                            withoutWords += phrases[j] + " ";
+//                        }
+//                    }
+//                }
+//            } else {
+//                while (length > 0) {
+//                    for (int i = 0; i < words.length; i++) {
+//                        if (phrases[iter].equals(words[i])) {
+//                            counter++;
+//                        }
+//                    }
+//                    if (counter == 0) {
+//                        withoutWords += phrases[iter] + " ";
+//                        phrases[iter] = "";
+//                    }
+//                    iter++;
+//                    counter = 0;
+//                    length--;
+//                }
+//            }
+//            return withoutWords.strip();
+//        }
+//    }
 
-            if (words.length == 1) {
-                for (int i = 0; i < words.length; i++) {
-                    for (int j = 0; j < phrases.length; j++) {
-                        if (!phrases[j].equals(words[i])) {
-                            withoutWords += phrases[j] + " ";
-                        }
-                    }
-                }
-            } else {
-                while (length > 0) {
-                    for (int i = 0; i < words.length; i++) {
-                        if (phrases[iter].equals(words[i])) {
-                            counter++;
-                        }
-                    }
-                    if (counter == 0) {
-                        withoutWords += phrases[iter] + " ";
-                        phrases[iter] = "";
-                    }
-                    iter++;
-                    counter = 0;
-                    length--;
+//    public String remove(String phrase, String[] words) {
+//
+//        for (int i = 0; i < words.length; i++) {
+//            phrase = phrase.replace(" " + words[i], "");
+//        }
+//        return phrase;
+//    }
+
+    public String remove(String phrase, String[] words) {
+        String [] phrases = phrase.split(" ");
+        String withoutWords = "";
+        for (int i = 0; i < words.length; i++) {
+            for (int j = 0; j < phrases.length; j++) {
+                if (words[i].equals(phrases[j])){
+                    phrases[j] = null;
                 }
             }
-            return withoutWords.strip();
         }
+        for (String p: phrases)
+            if (p != null)
+                withoutWords += " " + p;
+        return withoutWords.strip();
     }
+
+}
 
 class WordDeleterTest {
     public static void main(String[] args) {
