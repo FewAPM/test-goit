@@ -1,30 +1,26 @@
 package moduleSeven;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
-class WordFreqCounter{
-    public float countFreq(String phrase, String word){
-        String [] str = phrase.toLowerCase().split(" ");
-        float counter = 0.0f;
-        for(String s: str){
-            if (Objects.equals(s, word.toLowerCase())) {
+class StringByteWorker{
+    public String process(byte[] bytes){
+        String str = new String(bytes);
+        return str.toLowerCase();
+    }
+}
+
+class ShortWordCounter{
+    public int count(String phrase, int minLength){
+        int counter = 0;
+        String [] str = phrase.split(" ");
+        for (String element: str) {
+
+            if (element.length() <= minLength) {
                 counter++;
             }
         }
-        System.out.println(Arrays.toString(str));
-        System.out.println("counter = " + counter);
-        return  counter/ str.length;
-    }
-
-}
-class WordFreqCounterTester{
-
-    public static void main(String[] args) {
-        WordFreqCounter wfc = new WordFreqCounter();
-        String phrase = "sycovab nylul Be ewp qyykuwi Be huakjefase umtimycu jon";
-        String word = "Be";
-        System.out.println(wfc.countFreq(phrase, word));
-
+        return counter;
     }
 }
