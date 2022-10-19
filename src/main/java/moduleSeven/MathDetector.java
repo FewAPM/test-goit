@@ -20,8 +20,8 @@ class MathDetector {
         boolean second = false;
         boolean third = false;
         int counter = 0;
-        int [] a = new int[] {48,49,50,51,52,53,54,55,56,60};
-         byte [] bytes = text.getBytes();
+        int[] a = new int[]{48, 49, 50, 51, 52, 53, 54, 55, 56, 60};
+        byte[] bytes = text.getBytes();
 
         for (int i = 0; i < bytes.length; i++) {
             if (bytes[i] == 42 || bytes[i] == 45 | bytes[i] == 47 || bytes[i] == 43) {
@@ -48,6 +48,6 @@ class MathDetector {
         }
         return first && second && third;
     }
-
 }
+
 

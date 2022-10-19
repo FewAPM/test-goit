@@ -74,5 +74,7 @@ class WordDeleterTest {
        System.out.println(wordDeleter.remove("This is Sparta", new String[] {"is"}));
 
         System.out.println(wordDeleter.remove("xiefbidyd yhypno zime ycly mynopybi vys zawofu", new String[] {"zawofu", "zime", "ycly", "vys", "yhypno"}));
+        // v g
+        System.out.println(wordDeleter.remove("a b c d a b c v g", new String[] {"a", "b", "c", "d", "a", "b", "c"}));
     }
 }

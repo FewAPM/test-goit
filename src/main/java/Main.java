@@ -1,22 +1,33 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        int counter = 1;
-        int sum = 0;
-        int [][] a = new int[4][3];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 3; j++) {
-                a[i][j] =  counter++;
-                System.out.print( " " + a[i][j]);
-                sum += a[i][j];
+//        String s = "april 5, year 2000";
+//        List<Integer> numbers = new ArrayList<>();
+//        for (int i = 0; i < s.length(); i++) {
+//            if (Character.isDigit(s.charAt(i))){
+//                numbers.add(Integer.parseInt(String.valueOf(s.charAt(i))));
+//
+//            }
+//
+//        }
+//
+//        System.out.println("numbers = " + numbers);
+        String s = "april 5, year 2000";
+        List<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isDigit(s.charAt(i))){
+                numbers.add(Integer.parseInt(String.valueOf(s.charAt(i))));
+
             }
-            System.out.println();
+
         }
-        System.out.println("sum = " + sum);
+        Integer[] arrayToReturn = numbers.toArray(new Integer[0]);
+        System.out.println("Arrays.toString(arrayToReturn) = " + Arrays.toString(arrayToReturn));
     }
 
 }
