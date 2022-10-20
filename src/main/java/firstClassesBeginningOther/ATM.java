@@ -1,3 +1,5 @@
+package firstClassesBeginningOther;
+
 public class ATM {
     public int countBanknotes(int sum){
         int amount = 0;

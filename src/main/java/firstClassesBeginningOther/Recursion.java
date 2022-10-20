@@ -1,7 +1,9 @@
+package firstClassesBeginningOther;
+
 public class Recursion {
     public static void main(String[] args) {
         //System.out.println(factorial(5));
-        //System.out.println(new Recursion().sumQuads(3));
+        //System.out.println(new firstClassesBeginningOther.Recursion().sumQuads(3));
         Recursion r = new Recursion();
 
     }

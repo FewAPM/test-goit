@@ -1,3 +1,5 @@
+package firstClassesBeginningOther;
+
 import java.util.Arrays;
 
 public class DeleteFromArray {
@@ -21,7 +23,7 @@ public class DeleteFromArray {
     }
 
     public static void main(String[] args) {
-       // System.out.println(Arrays.toString(new TestClass().removePrice(new int[] {6, 0, 5, 9, 5, 7, 9, 0, 7, 0}, 0)));
+       // System.out.println(Arrays.toString(new firstClassesBeginningOther.TestClass().removePrice(new int[] {6, 0, 5, 9, 5, 7, 9, 0, 7, 0}, 0)));
 
     }
 }

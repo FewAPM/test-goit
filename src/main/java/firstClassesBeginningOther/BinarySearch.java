@@ -1,3 +1,5 @@
+package firstClassesBeginningOther;
+
 public class BinarySearch {
     static int counter = 0;
 

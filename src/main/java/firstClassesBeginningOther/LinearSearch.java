@@ -1,3 +1,5 @@
+package firstClassesBeginningOther;
+
 public class LinearSearch {
     private static int linearSearch(int[] arr, int search) {
         int [] array = arr;

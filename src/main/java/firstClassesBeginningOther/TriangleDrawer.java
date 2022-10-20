@@ -1,3 +1,5 @@
+package firstClassesBeginningOther;
+
 public class TriangleDrawer {
 
     public String drawTriangle(int side) {

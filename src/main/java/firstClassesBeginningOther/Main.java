@@ -1,6 +1,9 @@
+package firstClassesBeginningOther;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -28,6 +31,8 @@ public class Main {
         }
         Integer[] arrayToReturn = numbers.toArray(new Integer[0]);
         System.out.println("Arrays.toString(arrayToReturn) = " + Arrays.toString(arrayToReturn));
+
+
     }
 
 }
