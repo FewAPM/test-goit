@@ -16,6 +16,9 @@ public class MyArrayList {
     int index;
 
     public void add(int a) {
+        if (data.length == 0) {
+            data = new int[SIZE];
+        }
         if(index == data.length) {
             System.out.println("Size is doubled" + "index " + index);
             int newSize = index * 2;
@@ -53,18 +56,17 @@ public class MyArrayList {
         return data[index];
     }
 
-//    public void clear(){
-//        int [] clear = new int[0];
-//        index = 0;
-//        data = clear;
-//    }
+    public void clear(){
+        data = new int[0];
+        index = 0;
+    }
 
         @Override
     public String toString() {
-//        if (data.length == 0){
-//
-//            return "[]";
-//        }
+        if (data.length == 0){
+
+            return "[]";
+        }
         StringJoiner result = new StringJoiner(", ");
         for (int i = 0; i < index; i++) {
                 result.add(Integer.toString(data[i]));

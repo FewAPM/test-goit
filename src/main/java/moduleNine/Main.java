@@ -23,11 +23,26 @@ public class Main {
         System.out.println(list);
         System.out.println("list.size() = " + list.size());
         System.out.println("list.get(1) = " + list.get(1));
-      //  list.clear();
+        list.clear();
         System.out.println("list = " + list);
         list.add(0);
         list.add(1);
         System.out.println(list);
+
+        for (int i = 0; i < 13; i++) {
+            list.add(i);
+        }
+//        System.out.println("list = " + list);
+//        list.remove(1);
+//        System.out.println("list = " + list);
+
+        System.out.println(list);
+        System.out.println("list.size() = " + list.size());
+        list.remove(1);
+        System.out.println(list);
+        System.out.println("list.size() = " + list.size());
+        System.out.println("list.get(1) = " + list.get(1));
+        list.clear();
 
 
         /////////////////////////////
