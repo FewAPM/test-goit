@@ -68,6 +68,10 @@ public class Main {
 //        System.arraycopy(afterI,0,newData,beforeI.length, afterI.length);
 //        System.out.println("Arrays.toString(newData) = " + Arrays.toString(newData));
 
+        MyArrayList names = new MyArrayList();
+        names.add("Peter");
+        names.add("Igor");
+//        System.out.println("names = " + names);
     }
 
 
