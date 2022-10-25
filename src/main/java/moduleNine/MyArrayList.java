@@ -53,8 +53,8 @@ public class MyArrayList <T> {
         return index;
     }
 
-    public Integer get(Integer index){
-        return (Integer) data[index];
+    public Object get(Integer index){
+        return data[index];
     }
 
     public void clear(){
@@ -70,7 +70,7 @@ public class MyArrayList <T> {
         }
         StringJoiner result = new StringJoiner(", ");
         for (int i = 0; i < index; i++) {
-                result.add(Integer.toString((Integer) data[i]));
+                result.add(data[i].toString());
         }
         return "[ " + result + " ]";
     }

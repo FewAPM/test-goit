@@ -71,7 +71,11 @@ public class Main {
         MyArrayList names = new MyArrayList();
         names.add("Peter");
         names.add("Igor");
-//        System.out.println("names = " + names);
+        System.out.println("names.size() = " + names.size());
+        names.remove(0);
+        System.out.println("names.size() = " + names.size());
+        System.out.println("names.get(0) = " + names.get(0));
+        System.out.println("names = " + names);
     }
 
 
