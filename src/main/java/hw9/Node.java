@@ -1,15 +1,11 @@
-package myLinkedList;
+package hw9;
 
-public class Node<T> {
+public class Node<T, I> {
 
     static int size = 0;
     private T value;
-    private Node<T> next;
-    private Node<T> prev;
-
-
-
-
+    private Node<T, I> next;
+    private Node<T, I> prev;
 
 
     public T getValue() {
@@ -21,21 +17,21 @@ public class Node<T> {
         this.value = value;
     }
 
-    public Node<T> getNext() {
+    public Node<T, I> getNext() {
 
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(Node<T, I> next) {
 
         this.next = next;
     }
 
-    public Node<T> getPrev() {
+    public Node<T, I> getPrev() {
         return prev;
     }
 
-    public void setPrev(Node<T> prev) {
+    public void setPrev(Node<T, I> prev) {
         this.prev = prev;
     }
 }

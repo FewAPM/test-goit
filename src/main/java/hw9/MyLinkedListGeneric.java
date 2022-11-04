@@ -1,38 +1,39 @@
-package myLinkedList;
+package hw9;
 
-public class MyLinkedListTest <T> {
+public class MyLinkedListGeneric <T> {
 
-    private Node <T> first; // початок списку
-    private Node <T> last; // кінець списку
+    private Node <T> first;
+    private Node <T> last;
 
-    int size = 0;// розмір списку
+    int size = 0;
 
     private static class Node <T> {
-        private T element;// значення (назва) ноди
-        Node <T> next; // посилання на наступну ноду
-        Node <T> previous; // посилання на попередню ноду
+        private T element;
+        Node <T> next;
+        Node <T> previous;
 
-        public Node (T element) { // конструктор ноди, з ініціалізацією її значення
+        public Node (T element) {
+
             this.element = element;
         }
     }
 
 
     public void add(T element) {
-        Node <T> newNode = new Node<>(element); // створюємо нову ноду
-        if (first == null) { // якщо список пустий, тобто first is null то робимо:
-            newNode.next = null; // посилання на наступну   null
-            newNode.previous = null; // посилання на попередню ноду будуть null
-            // newNode буде first and last ноди
+        Node <T> newNode = new Node<>(element);
+        if (first == null) {
+            newNode.next = null;
+            newNode.previous = null;
+
             first = newNode;
             last = newNode;
         } else {
-            // якщо список вже не пустий, то вписуємо в кінець
-            last.next = newNode;// змінюємо посилання з null на нову ноду
-            newNode.previous = last; // нова нода буде посилатися на попередню, що була раніше last
-            last = newNode;// тепер нова нода стане останньою і її посилання на next - null
+
+            last.next = newNode;
+            newNode.previous = last;
+            last = newNode;
         }
-        size++;// після кожного створення ноди збільшуємо розмір
+        size++;
     }
 
 
@@ -113,7 +114,7 @@ public class MyLinkedListTest <T> {
 
 
     public static void main(String[] args) {
-        MyLinkedListTest <String> list = new MyLinkedListTest<>();
+        MyLinkedListGeneric <String> list = new MyLinkedListGeneric<>();
         list.add("First");
         list.add("Second");
         list.add("Third");
@@ -137,6 +138,7 @@ public class MyLinkedListTest <T> {
         System.out.println("list.get(0) = " + list.get(0));
         System.out.println("list.get(1) = " + list.get(1));
         System.out.println("list.get(2) = " + list.get(2));
+
 
     }
 }

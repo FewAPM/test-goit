@@ -1,31 +1,31 @@
 package OOP;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Main {
 
-    public Main(){
-
-        System.out.println("Hi there!");
-    }
-
-    public int divide(int a, int b) {
-        int result = 0;
-        try {
-            System.out.println("Try block");
-            System.out.println(a/b);
-            result = a/b;
-        } catch (ArithmeticException e) {
-            System.out.println("It is forbidden to divide by 0");
-        } finally {
-            System.out.println("Print all the time");
-        }
-        return result;
-    }
 
     public static void main(String[] args) {
-        new Main().divide(15,0);
+        int [] arr1 = new int[]{0,1,2,3};
+        int [] arr2 = new int[]{4,5,6,7,8,9};
+        int [] sum = new int[arr1.length + arr2.length];
+        for (int i = 0; i < arr1.length; i++) {
+            sum[i] = arr1[i];
+        }
+
+        for (int i = 0; i < arr2.length; i++) {
+            sum[arr1.length + i] = arr2[i];
+        }
+        System.out.println("sum[arr1.length] = " + sum[arr1.length]);
+        System.out.println("sum = " + Arrays.toString(sum));
+        System.out.println((45+45)/2);
     }
+
+
+
+
+
 
 }
 
